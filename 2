@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string nome;
+    float salario;
+    int percentual_reajuste;
+
+    cout << "Digite o nome da pessoa: ";
+    cin >> nome;
+    
+    cout << "Digite o salário da pessoa: R$ ";
+    cin >> salario;
+
+    cout << "Digite o percentual de reajuste do salário (%): ";
+    cin >> percentual_reajuste;
+
+    float novo_salario = salario + (salario * percentual_reajuste / 100);
+
+    cout << "O novo salário de " << nome << " é R$ " << novo_salario << endl;
+
+    return 0;
+}
