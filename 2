@@ -1,24 +1,22 @@
-#include <iostream>
-#include <string>
-using namespace std;
+#include<stdio.h>
 
-int main() {
-    string nome;
-    float salario;
-    int percentual_reajuste;
-
-    cout << "Digite o nome da pessoa: ";
-    cin >> nome;
-    
-    cout << "Digite o salário da pessoa: R$ ";
-    cin >> salario;
-
-    cout << "Digite o percentual de reajuste do salário (%): ";
-    cin >> percentual_reajuste;
-
-    float novo_salario = salario + (salario * percentual_reajuste / 100);
-
-    cout << "O novo salário de " << nome << " é R$ " << novo_salario << endl;
-
-    return 0;
+ int main()
+{
+  char nome[50];
+  float salario, percentual, novo_salario;
+  
+  printf("digite o nome da pesoa:");
+  scanf("%s", nome);
+  
+  printf("digite o salario da pessoa: R$");
+  scanf("%f", &salario);
+  
+  printf("digite o valor do percentual:");
+  scanf("%f", &percentual);
+  
+  novo_salario = salario *(1+percentual/100);
+  
+  printf("novo_salario de %s: R$%.2f\n", nome, novo_salario);
+  
+  return 0;
 }
